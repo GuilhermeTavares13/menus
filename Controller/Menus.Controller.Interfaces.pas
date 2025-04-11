@@ -34,6 +34,15 @@ type
     function Item : TStringList;
   end;
 
+  iControllerListBoxDefault = interface
+    ['{E40AF6F9-5E0F-4154-9F0C-A42E3E0863D6}']
+    function Name(Value : String) : iControllerListBoxDefault;
+    function Align(Value : TAlignLayout) : iControllerListBoxDefault;
+    function ItemHeight(Value : Integer) : iControllerListBoxDefault;
+    function AddItem(Value : TFmxObject) : iControllerListBoxDefault;
+    function Lista : TFmxObject;
+  end;
+
 implementation
 
 end.
