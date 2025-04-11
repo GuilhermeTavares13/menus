@@ -3,7 +3,14 @@ program Menus;
 uses
   System.StartUpCopy,
   FMX.Forms,
-  Menus.View.Principal in 'Menus.View.Principal.pas' {Form1};
+  Menus.View.Principal in 'View\Menus.View.Principal.pas' {Form1},
+  Menus.Controller.Interfaces in 'Controller\Menus.Controller.Interfaces.pas',
+  Menus.Model.Interfaces in 'Model\Menus.Model.Interfaces.pas',
+  Menus.Controller.ListBox.Itens.Factory in 'Controller\Menus.Controller.ListBox.Itens.Factory.pas',
+  Menus.Controller.ListBox.Factory in 'Controller\Menus.Controller.ListBox.Factory.pas',
+  Menus.Controller.ListBox.Itens.Default in 'Controller\Menus.Controller.ListBox.Itens.Default.pas',
+  Menus.Controller.StringList.Factory in 'Controller\Menus.Controller.StringList.Factory.pas',
+  Menus.Controller.StringList.Default in 'Controller\Menus.Controller.StringList.Default.pas';
 
 {$R *.res}
 

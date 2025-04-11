@@ -1,0 +1,36 @@
+unit Menus.Controller.StringList.Default;
+
+interface
+
+uses Menus.Controller.Interfaces, System.Classes;
+
+type
+  TControllerStringListDefault = class(TInterfacedObject,iControllerStringListDefault)
+    function AddText(Value : String) : iControllerStringListDefault;
+    function SaveToFile(Value : String) : iControllerStringListDefault;
+    function Item : TStringList;
+  end;
+
+implementation
+
+{ TControllerStringListDefault }
+
+function TControllerStringListDefault.AddText(
+  Value: String): iControllerStringListDefault;
+begin
+  Result := Self;
+
+end;
+
+function TControllerStringListDefault.Item: TStringList;
+begin
+
+end;
+
+function TControllerStringListDefault.SaveToFile(
+  Value: String): iControllerStringListDefault;
+begin
+
+end;
+
+end.

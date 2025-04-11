@@ -1,0 +1,7 @@
+unit Menus.Controller.StringList.Factory;
+
+interface
+
+implementation
+
+end.

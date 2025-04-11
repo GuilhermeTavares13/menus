@@ -1,0 +1,16 @@
+unit Menus.Controller.StringList.Factory;
+
+interface
+
+uses Menus.Controller.Interfaces;
+
+type
+  TControllerStringListFactory = class(TInterfacedObject,iControllerStringListFactory)
+    constructor Create;
+    destructor Destroy; override;
+    class function New : iControllerStringListFactory;
+  end;
+
+implementation
+
+end.

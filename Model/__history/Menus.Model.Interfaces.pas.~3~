@@ -1,0 +1,10 @@
+unit Menus.Model.Interfaces;
+
+interface
+
+type
+
+
+implementation
+
+end.

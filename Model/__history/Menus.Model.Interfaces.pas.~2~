@@ -1,0 +1,12 @@
+unit Menus.Model.Interfaces;
+
+interface
+
+type
+  iControllerListBoxItensFactory = interface
+     ['{9E473E9D-C7A3-4C84-96D8-A433A4DF4299}']
+  end;
+
+implementation
+
+end.

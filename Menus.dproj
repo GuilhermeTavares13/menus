@@ -126,10 +126,17 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="Menus.View.Principal.pas">
+        <DCCReference Include="View\Menus.View.Principal.pas">
             <Form>Form1</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="Controller\Menus.Controller.Interfaces.pas"/>
+        <DCCReference Include="Model\Menus.Model.Interfaces.pas"/>
+        <DCCReference Include="Controller\Menus.Controller.ListBox.Itens.Factory.pas"/>
+        <DCCReference Include="Controller\Menus.Controller.ListBox.Factory.pas"/>
+        <DCCReference Include="Controller\Menus.Controller.ListBox.Itens.Default.pas"/>
+        <DCCReference Include="Controller\Menus.Controller.StringList.Factory.pas"/>
+        <DCCReference Include="Controller\Menus.Controller.StringList.Default.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -1125,14 +1132,6 @@
                 <ProjectRoot Platform="Win64x" Name="$(PROJECTNAME)"/>
             </Deployment>
             <Platforms>
-                <Platform value="Android">False</Platform>
-                <Platform value="Android64">False</Platform>
-                <Platform value="iOSDevice32">False</Platform>
-                <Platform value="iOSDevice64">False</Platform>
-                <Platform value="iOSSimARM64">False</Platform>
-                <Platform value="OSX32">False</Platform>
-                <Platform value="OSX64">False</Platform>
-                <Platform value="OSXARM64">False</Platform>
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">True</Platform>
             </Platforms>
