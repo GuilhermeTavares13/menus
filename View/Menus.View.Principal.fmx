@@ -1,12 +1,16 @@
 object Form1: TForm1
-  Left = 0
-  Top = 0
+  Left = 695
+  Top = 216
   Caption = 'Form1'
   ClientHeight = 480
   ClientWidth = 640
+  Position = Designed
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  Left = 695
+  Top = 216
   DesignerMasterStyle = 0
   object Layout1: TLayout
     Align = Left

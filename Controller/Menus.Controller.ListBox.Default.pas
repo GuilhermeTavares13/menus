@@ -18,9 +18,13 @@ type
     function ItemHeight(Value : Integer) : iControllerListBoxDefault;
     function AddItem(Value : TFmxObject) : iControllerListBoxDefault;
     function Lista : TFMXOBject;
+    procedure Exibir;
   end;
 
 implementation
+
+uses
+  FMX.Layouts;
 
 { TControllerListBoxDefault }
 
@@ -28,6 +32,7 @@ function TControllerListBoxDefault.AddItem(
   Value: TFmxObject): iControllerListBoxDefault;
 begin
   Result := Self;
+  FListBox.AddObject(Value);
 end;
 
 function TControllerListBoxDefault.Align(
@@ -40,16 +45,20 @@ end;
 constructor TControllerListBoxDefault.Create(Container : TComponent);
 begin
   FContainer := Container;
-  New(FContainer)
-  .Name('ListaDefault')
-  .Align(TAlignLayout.Client)
-  .ItemHeight(60);
+  FListBox := TListBox.Create(nil);
+  FListBox.Name := 'ListaDefault';
+  FListBox.Align := TAlignLayout.Client;
 end;
 
 destructor TControllerListBoxDefault.Destroy;
 begin
 
   inherited;
+end;
+
+procedure TControllerListBoxDefault.Exibir;
+begin
+  TLayout(FContainer).AddObject(FListBox);
 end;
 
 function TControllerListBoxDefault.Lista: TFMXOBject;
