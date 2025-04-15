@@ -11,14 +11,24 @@ type
     class function New : iControllerListBoxFactory;
     function Default(Container: TComponent) : iControllerListBoxDefault;
     function Principal(Container : TComponent) : iControllerListBoxMenu;
+    function Produto(Container : TComponent) : iControllerListBoxMenu;
+    function Cliente(Container : TComponent) : iControllerListBoxMenu;
+    function Fornecedor(Container : TComponent) : iControllerListBoxMenu;
   end;
 
 implementation
 
 uses
-  Menus.Controller.ListBox.Default, Menus.Controller.ListBox.Principal;
+  Menus.Controller.ListBox.Default, Menus.Controller.ListBox.Principal,
+  Menus.Controller.ListBox.Produto, Menus.Controller.ListBox.Fornecedor;
 
 { TControllerListBoxFactory }
+
+function TControllerListBoxFactory.Cliente(
+  Container: TComponent): iControllerListBoxMenu;
+begin
+  Result := TControllerListBoxProduto.New(Container);
+end;
 
 constructor TControllerListBoxFactory.Create;
 begin
@@ -37,6 +47,12 @@ begin
   inherited;
 end;
 
+function TControllerListBoxFactory.Fornecedor(
+  Container: TComponent): iControllerListBoxMenu;
+begin
+  Result := TControllerListBoxFornecedor.New(Container);
+end;
+
 class function TControllerListBoxFactory.New: iControllerListBoxFactory;
 begin
   Result := Self.Create;
@@ -46,6 +62,12 @@ function TControllerListBoxFactory.Principal(
   Container: TComponent): iControllerListBoxMenu;
 begin
   Result := TControllerListBoxPrincipal.New(Container);
+end;
+
+function TControllerListBoxFactory.Produto(
+  Container: TComponent): iControllerListBoxMenu;
+begin
+  Result := TControllerListBoxProduto.New(Container);
 end;
 
 end.

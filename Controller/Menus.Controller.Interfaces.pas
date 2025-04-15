@@ -23,12 +23,17 @@ type
     ['{4EA74759-8DA1-4DB3-BA30-E943685610E7}']
     function Default : iControllerListBoxItensDefault;
     function Produto : iControllerListBoxItemForm;
+    function Cliente : iControllerListBoxItemForm;
+    function Fornecedor : iControllerListBoxItemForm;
   end;
 
   iControllerListBoxFactory = interface
     ['{F23FEAF5-8280-4F04-96AF-FFD7F7968D2A}']
     function Default(Container: TComponent) : iControllerListBoxDefault;
     function Principal(Container : TComponent) : iControllerListBoxMenu;
+    function Produto(Container : TComponent) : iControllerListBoxMenu;
+    function Cliente(Container : TComponent) : iControllerListBoxMenu;
+    function Fornecedor(Container : TComponent) : iControllerListBoxMenu;
   end;
 
   iControllerListBoxItensDefault = interface

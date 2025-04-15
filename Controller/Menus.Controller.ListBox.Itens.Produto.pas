@@ -12,11 +12,14 @@ type
     destructor Destroy; override;
     class function New : iControllerListBoxItemForm;
     function Show : TFmxObject;
+    procedure onClick(Sender : TObject);
   end;
 
 implementation
 
 { TControllerListBoxItensProduto }
+
+uses Menus.View.Produtos;
 
 constructor TControllerListBoxItensProduto.Create;
 begin
@@ -34,6 +37,11 @@ begin
   Result := Self.Create;
 end;
 
+procedure TControllerListBoxItensProduto.onClick(Sender: TObject);
+begin
+  frmProdutos.Show;
+end;
+
 function TControllerListBoxItensProduto.Show: TFmxObject;
 begin
   Result :=
@@ -42,6 +50,7 @@ begin
       .Default
       .Name('btnProduto')
       .Text('Produto')
+      .onClick(onClick)
       .Item;
 end;
 

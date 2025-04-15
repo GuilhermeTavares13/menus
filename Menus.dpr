@@ -13,7 +13,16 @@ uses
   Menus.Controller.StringList.Default in 'Controller\Menus.Controller.StringList.Default.pas',
   Menus.Controller.ListBox.Default in 'Controller\Menus.Controller.ListBox.Default.pas',
   Menus.Controller.ListBox.Itens.Produto in 'Controller\Menus.Controller.ListBox.Itens.Produto.pas',
-  Menus.Controller.ListBox.Principal in 'Controller\Menus.Controller.ListBox.Principal.pas';
+  Menus.Controller.ListBox.Principal in 'Controller\Menus.Controller.ListBox.Principal.pas',
+  Menus.Controller.ListBox.Itens.Cliente in 'Controller\Menus.Controller.ListBox.Itens.Cliente.pas',
+  Menus.View.Produtos in 'View\Menus.View.Produtos.pas' {frmProdutos},
+  Menus.View.Cliente in 'View\Menus.View.Cliente.pas' {frmCliente},
+  Menus.Controller.ListBox.Produto in 'Controller\Menus.Controller.ListBox.Produto.pas',
+  Menus.Controller.ListBox.Cliente in 'Controller\Menus.Controller.ListBox.Cliente.pas',
+  Menus.View.Fornecedor in 'View\Menus.View.Fornecedor.pas' {frmFornecedor},
+  Menus.Controller.ListBox.Fornecedor in 'Controller\Menus.Controller.ListBox.Fornecedor.pas',
+  Menus.Controller.ListBox.Itens.Fornecedor in 'Controller\Menus.Controller.ListBox.Itens.Fornecedor.pas',
+  Menus.Controller.Forms.Default in 'Controller\Menus.Controller.Forms.Default.pas';
 
 {$R *.res}
 
