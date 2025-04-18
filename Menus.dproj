@@ -160,6 +160,8 @@
         <DCCReference Include="Controller\Menus.Controller.ListBox.Fornecedor.pas"/>
         <DCCReference Include="Controller\Menus.Controller.ListBox.Itens.Fornecedor.pas"/>
         <DCCReference Include="Controller\Menus.Controller.Forms.Default.pas"/>
+        <DCCReference Include="Model\Conexoes\Menus.Model.Conexoes.Interfaces.pas"/>
+        <DCCReference Include="Model\Conexoes\Menus.Model.Conexoes.ConexaoFiredac.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

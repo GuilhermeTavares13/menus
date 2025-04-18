@@ -34,6 +34,6 @@ begin
 end;
 
 initialization
-  RegisterFmxClasses(['TfrmProduto']);
+  RegisterFmxClasses([TfrmProdutos]);
 
 end.

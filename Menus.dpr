@@ -22,7 +22,9 @@ uses
   Menus.View.Fornecedor in 'View\Menus.View.Fornecedor.pas' {frmFornecedor},
   Menus.Controller.ListBox.Fornecedor in 'Controller\Menus.Controller.ListBox.Fornecedor.pas',
   Menus.Controller.ListBox.Itens.Fornecedor in 'Controller\Menus.Controller.ListBox.Itens.Fornecedor.pas',
-  Menus.Controller.Forms.Default in 'Controller\Menus.Controller.Forms.Default.pas';
+  Menus.Controller.Forms.Default in 'Controller\Menus.Controller.Forms.Default.pas',
+  Menus.Model.Conexoes.Interfaces in 'Model\Conexoes\Menus.Model.Conexoes.Interfaces.pas',
+  Menus.Model.Conexoes.ConexaoFiredac in 'Model\Conexoes\Menus.Model.Conexoes.ConexaoFiredac.pas';
 
 {$R *.res}
 

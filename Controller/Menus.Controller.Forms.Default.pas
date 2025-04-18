@@ -21,7 +21,7 @@ var
 begin
   ObjFMX := TFMXObjectClass(GetClass(ClassName));
   try
-    NewForm := TCustomForm(ObjFMX)
+    NewForm :=  (ObjFMX.Create(nil) as TCustomForm);
   except
      raise Exception.Create('Objeto não existe');
   end;

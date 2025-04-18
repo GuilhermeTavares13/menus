@@ -20,7 +20,7 @@ implementation
 
 { TControllerListBoxItensProduto }
 
-uses Menus.View.Fornecedor;
+uses Menus.Controller.Forms.Default;
 
 constructor TControllerListBoxItensFornecedor.Create;
 begin
@@ -40,7 +40,7 @@ end;
 
 procedure TControllerListBoxItensFornecedor.onClick(Sender: TObject);
 begin
-  frmFornecedor.Show;
+  TControllerFormsDefault.CreateForm('TfrmFornecedor');
 end;
 
 function TControllerListBoxItensFornecedor.Show: TFmxObject;

@@ -3,9 +3,8 @@ unit Menus.View.Cliente;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
-  FMX.Controls.Presentation, FMX.Layouts;
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Layouts, FMX.Types;
 
 type
   TfrmCliente = class(TForm)
@@ -35,6 +34,6 @@ begin
 end;
 
 initialization
-  RegisterFmxClasses(['TfrnCliente']);
+  RegisterFmxClasses([TfrmCliente]);
 
 end.

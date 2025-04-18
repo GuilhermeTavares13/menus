@@ -35,6 +35,6 @@ begin
 end;
 
 initialization
-  RegisterFmxClasses(['TfrmFornecedor']);
+  RegisterFmxClasses([TfrmFornecedor]);
 
 end.
