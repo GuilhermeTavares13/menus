@@ -27,7 +27,10 @@ uses
   Menus.Model.Conexoes.ConexaoFiredac in 'Model\Conexoes\Menus.Model.Conexoes.ConexaoFiredac.pas',
   Menus.Model.Conexoes.TableFiredac in 'Model\Conexoes\Menus.Model.Conexoes.TableFiredac.pas',
   Menus.Model.Conexoes.Factory.Conexao in 'Model\Conexoes\Menus.Model.Conexoes.Factory.Conexao.pas',
-  Menus.Model.Conexoes.Factory.DataSet in 'Model\Conexoes\Menus.Model.Conexoes.Factory.DataSet.pas';
+  Menus.Model.Conexoes.Factory.DataSet in 'Model\Conexoes\Menus.Model.Conexoes.Factory.DataSet.pas',
+  Menus.Model.Entity.Interfaces in 'Model\Entity\Menus.Model.Entity.Interfaces.pas',
+  Menus.Model.Entity.Produtos in 'Model\Entity\Menus.Model.Entity.Produtos.pas',
+  Menus.Model.Entity.Factory in 'Model\Entity\Menus.Model.Entity.Factory.pas';
 
 {$R *.res}
 

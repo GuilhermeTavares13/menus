@@ -165,6 +165,9 @@
         <DCCReference Include="Model\Conexoes\Menus.Model.Conexoes.TableFiredac.pas"/>
         <DCCReference Include="Model\Conexoes\Menus.Model.Conexoes.Factory.Conexao.pas"/>
         <DCCReference Include="Model\Conexoes\Menus.Model.Conexoes.Factory.DataSet.pas"/>
+        <DCCReference Include="Model\Entity\Menus.Model.Entity.Interfaces.pas"/>
+        <DCCReference Include="Model\Entity\Menus.Model.Entity.Produtos.pas"/>
+        <DCCReference Include="Model\Entity\Menus.Model.Entity.Factory.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

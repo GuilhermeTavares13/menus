@@ -12,7 +12,7 @@ type
       constructor Create;
       destructor Destroy; override;
       class function New : iModelFactoryDataSet;
-      function DataSetFiredac : iModelDataSet;
+      function DataSetFiredac(Conexao : iModelConexao) : iModelDataSet;
   end;
 implementation
 
@@ -26,9 +26,9 @@ begin
 
 end;
 
-function TModelConexaoFactoryDataSet.DataSetFiredac: iModelDataSet;
+function TModelConexaoFactoryDataSet.DataSetFiredac(Conexao : iModelConexao): iModelDataSet;
 begin
-//  Result := TModelConexoesTableFiredac.Create();
+  Result := TModelConexoesTableFiredac.New(Conexao);
 end;
 
 destructor TModelConexaoFactoryDataSet.Destroy;

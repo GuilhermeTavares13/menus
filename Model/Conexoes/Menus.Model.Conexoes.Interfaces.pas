@@ -38,7 +38,7 @@ type
 
   iModelFactoryDataSet = interface
     ['{6F54DBE6-2F1A-4BF1-AC93-5A350FEC7822}']
-    function DataSetFiredac : iModelDataSet;
+    function DataSetFiredac(Conexao : iModelConexao) : iModelDataSet;
   end;
 
 
