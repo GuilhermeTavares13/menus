@@ -162,6 +162,9 @@
         <DCCReference Include="Controller\Menus.Controller.Forms.Default.pas"/>
         <DCCReference Include="Model\Conexoes\Menus.Model.Conexoes.Interfaces.pas"/>
         <DCCReference Include="Model\Conexoes\Menus.Model.Conexoes.ConexaoFiredac.pas"/>
+        <DCCReference Include="Model\Conexoes\Menus.Model.Conexoes.TableFiredac.pas"/>
+        <DCCReference Include="Model\Conexoes\Menus.Model.Conexoes.Factory.Conexao.pas"/>
+        <DCCReference Include="Model\Conexoes\Menus.Model.Conexoes.Factory.DataSet.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
