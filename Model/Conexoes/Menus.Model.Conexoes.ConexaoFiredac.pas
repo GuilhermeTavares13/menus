@@ -32,6 +32,7 @@ type
       function Server(Value : String) : iModelConexaoParametros;
       function Porta(Value : Integer) : iModelConexaoParametros;
       function EndParametros : iModelConexao;
+      function Conectar : iModelConexao;
   end;
 
 implementation
@@ -42,13 +43,18 @@ uses
 
 { TConexaoFireDac }
 
+function TModelConexaoFireDac.Conectar: iModelConexao;
+begin
+  Result := Self;
+  FConexao.Connected := True;
+end;
+
 constructor TModelConexaoFireDac.Create;
 begin
   FConexao := TFDConnection.Create(nil);
   FDGUIxWaitCursor1 := TFDGUIxWaitCursor.Create(nil);
   FDPhysFBDriverLink1 := TFDPhysFBDriverLink.Create(nil);
   LerParametros;
-  FConexao.Connected := True;
 end;
 
 function TModelConexaoFireDac.Database(Value: String): iModelConexaoParametros;

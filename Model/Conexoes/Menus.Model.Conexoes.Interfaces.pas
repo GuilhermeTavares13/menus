@@ -10,6 +10,7 @@ type
 
   iModelConexao = interface
     ['{E50F0C07-5044-4897-B397-F93996383411}']
+    function Conectar : iModelConexao;
     function EndConexao : TComponent;
     function Parametros : iModelConexaoParametros;
   end;

@@ -3,7 +3,7 @@ unit Menus.Model.Entity.Factory;
 interface
 
 uses
-  Menus.Model.Entity.Interfaces;
+  Menus.Model.Entity.Interfaces,Menus.Model.Conexoes.Interfaces;
 
 type
   TModelEntityFactory = class(TInterfacedObject, iModelEntityFactory)
@@ -12,12 +12,15 @@ type
       constructor Create;
       destructor Destroy; override;
       class function New : iModelEntityFactory;
+      function Produtos(DataSet : iModelDataSet) : iModelEntity;
   end;
 
 
 implementation
 
 { TModelEntityFactory }
+
+uses Menus.Model.Entity.Produtos;
 
 constructor TModelEntityFactory.Create;
 begin
@@ -33,6 +36,11 @@ end;
 class function TModelEntityFactory.New: iModelEntityFactory;
 begin
   Result := Self.Create;
+end;
+
+function TModelEntityFactory.Produtos(DataSet: iModelDataSet): iModelEntity;
+begin
+  Result := TModelEntityProdutos.New(DataSet);
 end;
 
 end.

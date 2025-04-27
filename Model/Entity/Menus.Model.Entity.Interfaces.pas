@@ -3,7 +3,8 @@ unit Menus.Model.Entity.Interfaces;
 interface
 
 uses
-  System.Classes;
+  System.Classes,
+  Menus.Model.Conexoes.Interfaces;
 
 type
   iModelEntity = interface
@@ -13,8 +14,10 @@ type
 
   iModelEntityFactory = interface
     ['{8DF1F528-6BB6-4840-91E3-1EAA09006987}']
+    function Produtos(DataSet : iModelDataSet) : iModelEntity;
   end;
 
 implementation
+
 
 end.
