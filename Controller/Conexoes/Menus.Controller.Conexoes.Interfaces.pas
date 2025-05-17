@@ -12,7 +12,7 @@ type
 
   iControllerFactoryDataSet = interface
     ['{3177D00A-F030-40FA-B7A0-EAC9B998A67E}']
-    function DataSet : iModelDataSet;
+    function DataSet(Conexao : iModelConexao) : iModelDataSet;
   end;
 
 implementation

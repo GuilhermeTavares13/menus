@@ -2,7 +2,8 @@ unit Menus.Controller.Conexoes.Factory.DataSet;
 
 interface
 
-uses Menus.Controller.Conexoes.Interfaces, Menus.Model.Conexoes.Interfaces;
+uses Menus.Controller.Conexoes.Interfaces, Menus.Model.Conexoes.Interfaces,
+  Menus.Model.Conexoes.Factory.DataSet;
 
 type
   TControllerConexoesFactoryDataSet = class(TInterfacedObject,iControllerFactoryDataSet)
@@ -11,7 +12,7 @@ type
       constructor Create;
       destructor Destroy; override;
       class function New : iControllerFactoryDataSet;
-      function DataSet : iModelDataSet;
+      function DataSet(Conexao : iModelConexao) : iModelDataSet;
   end;
 
 implementation
@@ -23,9 +24,9 @@ begin
 
 end;
 
-function TControllerConexoesFactoryDataSet.DataSet: iModelDataSet;
+function TControllerConexoesFactoryDataSet.DataSet(Conexao : iModelConexao): iModelDataSet;
 begin
-
+  Result := TModelConexaoFactoryDataSet.New.DataSetFiredac(Conexao);
 end;
 
 destructor TControllerConexoesFactoryDataSet.Destroy;
